@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rozha+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:900&display=swap');
+
+$dark-blue-color: #1E3B44;
+$bright-blue-color: #6DD3FF;
+$accent-color: #E88D67;
+$grey-color: #CCE2E5;
+$off-white-color: #F7FFFE;
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-user-select: -moz-none;
+    user-select: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    min-height: 550vh;
+
+}
+
+.arrow-container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    animation: arrow-animation 1.5s infinite ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @keyframes arrow-animation {
+        0% {
+            transform: translateY(-15px);
+            opacity: 1;
+        }
+        50% {
+            transform: translateY(0px);
+            opacity: 0.5;
+        }
+        100% {
+            transform: translateY(-15px);
+            opacity: 1;
+        }
+    }
+
+}
+
+.stripe {
+    position: relative;
+    height: 100px;
+    width: calc(100% - 20px);
+    top: 20px;
+    left: 20px;
+
+    .project-title {
+        position: relative;
+        margin: 0px;
+        font-family: 'Playfair Display', serif;
+        font-size: 120px;
+        color: $off-white-color;
+        top: -1px;
+        left: 14px;
+    }
+}
+
+.slide-one {
+    background-color: $dark-blue-color;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    .text-container {
+        color: $off-white-color;
+        flex-grow: 1;
+        padding: 20% 0;
+
+        h3 {
+            letter-spacing: 3px;
+            font-size: 20px;
+            font-family: 'Oxygen', sans-serif;
+
+            @keyframes dot-animation {
+                0% {
+                    opacity: 0.2;
+                }
+                50% {
+                    opacity: 0.6;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            .dot-one,
+            .dot-two,
+            .dot-three {
+                font-size: 25px;
+                animation: dot-animation 1s infinite both;
+            }
+            .dot-two {
+                animation-delay: 0.2s;
+            }
+            .dot-three {
+                animation-delay: 0.4s;
+            }
+        }
+
+        h2 {
+            letter-spacing: 3px;
+            font-size: 25px;
+        }
+
+        .ampersand {
+            font-family: 'Rozha One', serif;
+            font-size: 40px;
+        }
+    }
+    
+}
+
+.slide-two {
+    background-color: $accent-color;
+    min-height: 200vh;
+
+    .stripe {
+        background-color: #F2C0AC;
+    }
+
+    .slide-two-body {
+        position: relative;
+        min-height: 180vh;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .project-container {
+            height: 90%;
+            width: 80%;
+            margin-bottom: 50px;
+            flex-grow: 1;
+
+            .featured-project {
+                position: relative;
+                height: 500px;
+                width: 100%;
+                background-color: $dark-blue-color;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                padding: 0px 15%;
+                
+                .featured-project-title {
+                    position: relative;
+                    color: $off-white-color;
+                    font-size: 50px;
+                    margin: 0px;
+                    padding-top: 20px;
+                }
+
+                hr {
+                    position: relative;
+                    border: 2px solid $off-white-color;
+                    width: 20%;
+                    margin: 50px 0;
+                }
+
+                .featured-project-info {
+                    position: relative;
+                    font-size: 25px;
+                    color: $off-white-color;
+                    margin: 0px;
+                    flex-grow: 2;
+                }
+
+            }
+
+            .project-one {
+                height: 500px;
+                background-color: $grey-color;
+            }
+
+            .project-two {
+                height: 500px;
+                background-color: $bright-blue-color;
+            }
+
+            .project-three {
+                height: 500px;
+                background-color: $dark-blue-color;
+            }
+
+            .project-four {
+                height: 500px;
+                background-color: #F2C0AC;
+            }
+        }
+    }
+}
+
+.slide-three {
+    background-color: $bright-blue-color;
+    min-height: 150vh;
+
+    .stripe {
+        background-color: #C9EFFF;
+    }
+
+    .slide-three-body {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .work-container {
+            position: relative;
+            height: 90%;
+            width: 80%;
+            margin-bottom: 50px;
+            flex-grow: 1;
+
+            .featured-work {
+                height: 500px;
+                background-color: $accent-color;
+                width: 100%;
+            }
+
+            .work-one {
+                height: 500px;
+                background-color: $grey-color;
+            }
+
+            .work-two {
+                height: 500px;
+                background-color: $dark-blue-color;
+            }
+        }
+    }
+}
+
+.slide-four {
+    background-color: $grey-color;
+    min-height: 100vh;
+}
