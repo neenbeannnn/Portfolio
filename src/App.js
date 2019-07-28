@@ -65,7 +65,6 @@ class App extends Component {
               </span>
             </div>
             <div className='text-container'>
-              <box-icon id='sun' type='solid' name='sun' color={'#F7FFFE'} size={'50px'}></box-icon>
               <h3>
                 Hello, I am Nina M. Huang<span className='dot-one'>.</span><span className='dot-two'>.</span><span className='dot-three'>.</span>
               </h3>
