@@ -54,14 +54,14 @@ class App extends Component {
           <div className={'overlay-menu ' + (this.state.menuClick ? ' open' : '')}>
             <h3 className={'overlay-name text-center' + (this.state.menuClick ? ' open' : '')}>Nina M. Huang</h3>
             <hr className={(this.state.menuClick ? ' open' : '')}/>
-            <h2 className={'overlay-projects text-center' + (this.state.menuClick ? ' open' : '')} onClick={this.handleMenuProjectClick}>projects.</h2> 
-            <h2 className={'overlay-work text-center' + (this.state.menuClick ? ' open' : '')} onClick={this.handleMenuWorkClick}>work.</h2>
-            <h2 className={'overlay-contact text-center' + (this.state.menuClick ? ' open' : '')} onClick={this.handleMenuConnectClick}>let's connect.</h2>     
+            <h2 className={'overlay-projects text-center my-3 w-100' + (this.state.menuClick ? ' open' : '')} onClick={this.handleMenuProjectClick}>projects.</h2> 
+            <h2 className={'overlay-work text-center my-3 w-100' + (this.state.menuClick ? ' open' : '')} onClick={this.handleMenuWorkClick}>work.</h2>
+            <h2 className={'overlay-contact text-center my-3 w-100' + (this.state.menuClick ? ' open' : '')} onClick={this.handleMenuConnectClick}>let's connect.</h2>     
           </div>
           <div className='slide-one' ref={'slide1'}>
-            <div className='menu-bar'>
+            <div className='menu-bar w-100 pl-3 pt-3'>
               <span className={'menu-container' + (this.state.menuClick ? ' clicked' : '')} onClick={this.handleMenuClick}>
-                <box-icon name='menu' color={'#F7FFFE'} size={'50px'}></box-icon>
+                <box-icon name={this.state.menuClick ? 'x' : 'menu'} color={'#F7FFFE'} size={'50px'}></box-icon>
               </span>
             </div>
             <div className='text-container'>
@@ -73,14 +73,14 @@ class App extends Component {
                 I am a computer engineering student <span className='ampersand'>&</span> front-end developer.
               </h2>
             </div>
-            <div className='arrow-container' onClick={() => this.refs.slide2.scrollIntoView()}>
+            <div className='arrow-container w-100' onClick={() => this.refs.slide2.scrollIntoView()}>
               <box-icon name='chevrons-down' animation='chevrons-down-fade-down' color={'#F7FFFE'} size={'50px'}></box-icon>
             </div>
           </div>
 
           <div className='slide-two' ref={'slide2'}>
             <div className='stripe'>
-              <h1 className='title'>
+              <h1 className='title m-0'>
                 Projects.
               </h1>
             </div>
@@ -98,7 +98,7 @@ class App extends Component {
                     the unique chaparral ecosystem. Thus this app was hatched from our interest of educating 
                     not only others, but also ourselves.
                   </h2>
-                  <div className={'read-more-container' + (this.state.readMoreSpin1 ? ' spin' : ' ')} onClick={() => this.setState({readMoreSpin1: true})} onAnimationEnd={() => this.setState({readMoreSpin1: false})}>
+                  <div className={'read-more-container w-100' + (this.state.readMoreSpin1 ? ' spin' : ' ')} onClick={() => this.setState({readMoreSpin1: true})} onAnimationEnd={() => this.setState({readMoreSpin1: false})}>
                     <box-icon className='read-more' name='plus-circle' type='solid' size={'50px'} color={'#F7FFFE'}></box-icon>
                   </div>
                 </div>
@@ -112,7 +112,7 @@ class App extends Component {
                       Pin an emoji and short message in your current location 
                       to be viewed by other users of the iOS app
                     </h2>
-                    <div className={'read-more-container' + (this.state.readMoreSpin2 ? ' spin' : ' ')} onClick={() => this.setState({readMoreSpin2: true})} onAnimationEnd={() => this.setState({readMoreSpin2: false})}>
+                    <div className={'read-more-container w-100' + (this.state.readMoreSpin2 ? ' spin' : ' ')} onClick={() => this.setState({readMoreSpin2: true})} onAnimationEnd={() => this.setState({readMoreSpin2: false})}>
                       <box-icon className='read-more' name='plus-circle' type='solid' size={'50px'} color={'#F7FFFE'}></box-icon>
                     </div>
                   </Col>
@@ -124,7 +124,7 @@ class App extends Component {
                     <h2 className='project-info text-center'>
                       A simple 2-player card game that implements LinkedLists to remove matching cards
                     </h2>
-                    <div className={'read-more-container' + (this.state.readMoreSpin3 ? ' spin' : ' ')} onClick={() => this.setState({readMoreSpin3: true})} onAnimationEnd={() => this.setState({readMoreSpin3: false})}>
+                    <div className={'read-more-container w-100' + (this.state.readMoreSpin3 ? ' spin' : ' ')} onClick={() => this.setState({readMoreSpin3: true})} onAnimationEnd={() => this.setState({readMoreSpin3: false})}>
                       <box-icon className='read-more' name='plus-circle' type='solid' size={'50px'} color={'#F7FFFE'}></box-icon>
                     </div>
                   </Col>
@@ -139,7 +139,7 @@ class App extends Component {
                       Control a bee, collect honey from flowers, shoot honey at wasps, 
                       and collect upgrades!
                     </h2>
-                    <div className={'read-more-container' + (this.state.readMoreSpin4 ? ' spin' : ' ')} onClick={() => this.setState({readMoreSpin4: true})} onAnimationEnd={() => this.setState({readMoreSpin4: false})}>
+                    <div className={'read-more-container w-100' + (this.state.readMoreSpin4 ? ' spin' : ' ')} onClick={() => this.setState({readMoreSpin4: true})} onAnimationEnd={() => this.setState({readMoreSpin4: false})}>
                       <box-icon className='read-more' name='plus-circle' type='solid' size={'50px'} color={'#F7FFFE'}></box-icon>
                     </div>
                   </Col>
@@ -152,13 +152,13 @@ class App extends Component {
                       A short fun simple game about matching absurd wikiHow photos
                        with equally weird tutorial names.
                     </h2>
-                    <div className={'read-more-container' + (this.state.readMoreSpin5 ? ' spin' : ' ')} onClick={() => this.setState({readMoreSpin5: true})} onAnimationEnd={() => this.setState({readMoreSpin5: false})}>
+                    <div className={'read-more-container w-100' + (this.state.readMoreSpin5 ? ' spin' : ' ')} onClick={() => this.setState({readMoreSpin5: true})} onAnimationEnd={() => this.setState({readMoreSpin5: false})}>
                       <box-icon className='read-more' name='plus-circle' type='solid' size={'50px'} color={'#F7FFFE'}></box-icon>
                     </div>
                   </Col>
                 </Row>
               </div>
-              <div className='arrow-container ' onClick={() => this.refs.slide3.scrollIntoView()}>
+              <div className='arrow-container w-100' onClick={() => this.refs.slide3.scrollIntoView()}>
                 <box-icon name='chevrons-down' animation='chevrons-down-fade-down' color={'#F7FFFE'} size={'50px'}></box-icon>
               </div>
             </div>
@@ -166,7 +166,7 @@ class App extends Component {
 
           <div className='slide-three' ref={'slide3'}>
             <div className='stripe'>
-              <h1 className='title'>
+              <h1 className='title m-0'>
                 Work.
               </h1>
             </div>
@@ -184,17 +184,17 @@ class App extends Component {
                   </Col>
                 </Row>
               </div>
-              <div className='arrow-container' onClick={() => this.refs.slide4.scrollIntoView()}>
+              <div className='arrow-container w-100' onClick={() => this.refs.slide4.scrollIntoView()}>
                 <box-icon name='chevrons-down' animation='chevrons-down-fade-down' color={'#F7FFFE'} size={'50px'}></box-icon>
               </div>
             </div>
           </div>
 
           <div className='slide-four' ref={'slide4'}>
-            <div className='title'>
-              Let's connect!
-            </div>
             <div className='contact-box-container'>
+              <div className='title'>
+                Say hi!
+              </div>
               <div className='contact-box'>
                 <Row>
                   <Col xs={8} className='left-side'>
@@ -206,7 +206,7 @@ class App extends Component {
                     <h2 className='description'>
                       Hi! I'm Nina, a full-time student at UCSB and front-end developer based in Irvine. I love working with 
                       kids and am constantly learning something new (currently React). Feel free to reach
-                       out and send me a quick email. Let's connect!
+                       out and send me a quick email. Say hi!
                     </h2>
                     <div>
                       <a className='mr-2' href='https://github.com/neenbeannnn' rel='noopener noreferrer' target='_blank'>
@@ -217,7 +217,7 @@ class App extends Component {
                       </a>
                     </div>
                   </Col>
-                  <Col xs={4} className='right-side'>
+                  <Col xs={4}>
                     
                   </Col>
                 </Row>
