@@ -1,0 +1,134 @@
+@import './shared.scss';
+
+.project-slide {
+    background-color: $accent-color;
+    min-height: 200%;
+
+    .stripe {
+        background-color: #F2C0AC;
+    }
+
+    .project-body {
+        position: relative;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 575px) {
+            margin-top: 65px;
+        }
+
+        .project-container {
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-bottom: 50px;
+
+            @media (max-width: 575px) {
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+
+            @media (max-width: 350px) {
+                margin-left: 3%;
+                margin-right: 3%;
+            }
+
+            .featured-project {
+                position: relative;
+                background-color: $dark-blue-color;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0 15%;
+
+                @media (max-width: 768px) {
+                    padding: 0 5%;
+                }
+            }
+
+            .project-title {
+                position: relative;
+                color: $off-white-color;
+                font-size: 50px;
+                padding-top: 50px;
+
+                @media (max-width: 992px) {
+                    font-size: 30px;
+                }
+
+                @media (max-width: 575px) {
+                    font-size: 40px;
+                }
+            }
+
+            hr {
+                position: relative;
+                border: 2px solid $off-white-color;
+                width: 20%;
+                margin: 50px 0;
+                transition: width 1s;
+
+                &.expand {
+                    width: 40%;
+                    transition: width 1s;
+                }
+            }
+
+            .project-info {
+                position: relative;
+                font-size: 20px;
+                font-family: 'Oxygen', sans-serif;
+                color: $off-white-color;
+                flex-grow: 1;
+
+                @media (max-width: 992px) {
+                    font-size: 18px;
+                }
+
+                @media (max-width: 575px) {
+                    font-size: 20px;
+                }
+            }
+
+            .project-one,
+            .project-two,
+            .project-three,
+            .project-four {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                padding: 0 50px;
+
+                @media (max-width: 768px) {
+                    padding: 0 10px;
+                }
+
+                @media (max-width: 575px) {
+                    padding: 0 5%;
+                }
+            }
+
+            .project-one {
+                background-color: $grey-color;
+            }
+
+            .project-two {
+                background-color: $bright-blue-color;
+            }
+
+            .project-three {
+                background-color: $dark-blue-color;
+            }
+
+            .project-four {
+                background-color: #F2C0AC;
+            }
+        }
+    }
+}

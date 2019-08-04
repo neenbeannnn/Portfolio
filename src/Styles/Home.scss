@@ -1,0 +1,77 @@
+@import './shared.scss';
+
+.menu-bar {
+
+    .menu-container {
+        opacity: 1;
+        transition: 0.5s linear;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &.clicked {
+            opacity: 0.5;
+            transition: 0.5s linear;
+        }
+    }
+}
+
+.home-slide {
+    background-color: $dark-blue-color;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    .text-container {
+        color: $off-white-color;
+        flex-grow: 1;
+        padding: 20% 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3 {
+            letter-spacing: 3px;
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-family: 'Oxygen', sans-serif;
+
+            @keyframes dot-animation {
+                0% {
+                    opacity: 0.2;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            .dot-one,
+            .dot-two,
+            .dot-three {
+                font-size: 25px;
+                animation: dot-animation 1s infinite both;
+            }
+            .dot-two {
+                animation-delay: 0.2s;
+            }
+            .dot-three {
+                animation-delay: 0.4s;
+            }
+        }
+
+        h2 {
+            letter-spacing: 3px;
+            font-size: 25px;
+        }
+
+        .ampersand {
+            font-family: 'Rozha One', serif;
+            font-size: 40px;
+        }
+    }
+    
+}

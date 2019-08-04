@@ -1,0 +1,55 @@
+@import './shared.scss';
+
+.work-slide {
+    background-color: $bright-blue-color;
+    min-height: 135%;
+
+    .stripe {
+        background-color: #C9EFFF;
+    }
+
+    .work-body {
+        position: relative;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 575px) {
+            margin-top: 65px;
+        }
+
+        .work-container {
+            position: relative;
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-bottom: 50px;
+
+            .featured-work {
+                background-color: $accent-color;
+                width: 100%;
+                height: 500px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0 15%;
+            }
+
+            .work-one {
+                background-color: $grey-color;
+                height: 500px;
+                width: 100%;
+            }
+
+            .work-two {
+                background-color: $dark-blue-color;
+                height: 500px;
+                width: 100%;
+            }
+        }
+    }
+}

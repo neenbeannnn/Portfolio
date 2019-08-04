@@ -1,0 +1,93 @@
+@import './shared.scss';
+
+.overlay-menu {
+    position: fixed;
+    z-index: 1;
+    background-color: $accent-color;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transition: 0.5s 0.6s ease-in;
+
+    &.open {
+        visibility: visible;
+        transition: 0.5s ease-in;
+    }
+
+    .overlay-name {
+        position: relative;
+        width: 100%;
+        font-family: 'Rozha', serif;
+        font-size: 70px;
+        color: $off-white-color;
+        margin: 0px;
+        opacity: 0;
+        transition: 0.6s ease-in;
+
+        @media (max-width: 440px) {
+            font-size: 50px;
+        }
+
+        &.open {
+            opacity: 1;
+            transition: 0.5s 0.6s ease-in;
+        }
+    }
+
+    hr {
+        position: relative;
+        border: 2px solid $off-white-color;
+        width: 20%;
+        opacity: 0;
+        transition: 0.4s ease-in;
+
+        &.open {
+            opacity: 1;
+            transition: 0.5s 0.8s ease-in;
+        }
+    }
+
+    h2 {
+        font-family: 'Oxygen', sans-serif;
+        color: $off-white-color;
+        font-size: 30px;
+        opacity: 0;
+        transition: 0.2s ease-in;
+
+        &:hover {
+            cursor: pointer;
+            font-style: italic;
+        }
+
+        &.open {
+            opacity: 1;
+            transition: opacity 0.5s 1s ease-in;
+        }
+    }
+
+    @media(max-width: 767px) {
+        width: 0;
+        height: 100%;
+        margin-top: 90px;
+
+        &.open {
+            width: 100%; 
+        }
+    }
+
+    @media (min-width: 768px) {
+        width: 100%;
+        height: 0;
+        margin-left: 90px;
+        padding-right: 15%;
+        padding-left: calc(15% - 90px);
+
+        &.open {
+            height: 100%;
+        }
+    }
+}

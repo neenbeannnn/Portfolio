@@ -1,0 +1,53 @@
+@import './shared.scss';
+
+.contact-slide {
+    background-color: $grey-color;
+    min-height: 100vh;
+
+    .contact-box-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .title {
+            color: $bright-blue-color;
+            left: -25%;
+            top: 70px;
+            z-index: 2;
+        }
+
+        .contact-box {
+            background-color: #ECF4F5;
+            margin: 0 15%;
+    
+            .left-side {
+                background-color: $dark-blue-color;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: flex-start;
+                padding: 50px 50px;
+                color: $off-white-color;
+
+                .email-text {
+                    font-size: 60px;
+                }
+
+                hr {
+                    position: relative;
+                    border: 2px solid $off-white-color;
+                    width: 50%;
+                    margin: 50px 0;
+                }
+
+                .description {
+                    font-size: 20px;
+                    font-family: 'Oxygen', sans-serif; 
+                    margin-bottom: 50px!important;
+                }
+                
+            }
+        }
+    }
+}

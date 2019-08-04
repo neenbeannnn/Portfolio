@@ -1,4 +1,4 @@
-import React, {Component } from 'react';
+import React, { Fragment, Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Row, Col} from 'react-bootstrap';
 import 'boxicons';
@@ -17,7 +17,8 @@ class Projects extends Component {
     }
 
     render() {
-        return (<div className='project-slide' >
+        return (
+          <Fragment>
             <div className='stripe'>
               <h1 className='title m-0'>
                 Projects.
@@ -88,8 +89,8 @@ class Projects extends Component {
                     </h3>
                     <hr/>
                     <h2 className='project-info text-center'>
-                      A short fun simple game about matching absurd wikiHow photos
-                       with equally weird tutorial names.
+                      A short fun simple game about matching absurd wikiHow photos 
+                      with equally weird tutorial names.
                     </h2>
                     <div className={'read-more-container w-100' + (this.state.readMoreSpin5 ? ' spin' : ' ')} onClick={() => this.setState({readMoreSpin5: true})} onAnimationEnd={() => this.setState({readMoreSpin5: false})}>
                       <box-icon className='read-more' name='plus-circle' type='solid' size={'50px'} color={'#F7FFFE'}></box-icon>
@@ -97,11 +98,12 @@ class Projects extends Component {
                   </Col>
                 </Row>
               </div>
-              <div className='arrow-container w-100' onClick={() => this.refs.workslide.scrollIntoView()}>
+              <div className='arrow-container w-100' onClick={this.props.scrollToNext}>
                 <box-icon name='chevrons-down' animation='chevrons-down-fade-down' color={'#F7FFFE'} size={'50px'}></box-icon>
               </div>
             </div>
-          </div>);
+          </Fragment>
+        );
     }
 }
 

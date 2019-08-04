@@ -1,0 +1,31 @@
+@import './shared.scss';
+
+.skill-slide {
+    background-color: white;
+    min-height: 100vh;
+
+    .stripe {
+        background-color: $grey-color;
+
+        .title {
+            color: $dark-blue-color;
+        }
+    }
+
+    .skill-body {
+        position: relative;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .skill-container {
+            position: relative;
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-bottom: 50px;
+        }
+    }
+}
