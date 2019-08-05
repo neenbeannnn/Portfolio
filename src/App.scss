@@ -1,4 +1,4 @@
-@import './Styles/shared.scss', './Styles/Overlay.scss', './Styles/Home.scss', './Styles/Projects.scss', './Styles/Skills.scss', './Styles/Work.scss', './Styles/Contact.scss';
+@import './Styles/shared.scss', './Styles/Overlay.scss', './Styles/Home.scss', './Styles/Projects.scss', './Styles/ProjectPage.scss', './Styles/Skills.scss', './Styles/Work.scss', './Styles/Contact.scss';
 
 *,
 *:before,
@@ -30,6 +30,11 @@ body {
 
 .wrapper {
     min-height: 635%;
+}
+
+a,
+a:hover {
+    text-decoration: none!important;
 }
 
 .arrow-container {

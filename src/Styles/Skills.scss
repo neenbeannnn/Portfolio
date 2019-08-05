@@ -6,26 +6,94 @@
 
     .stripe {
         background-color: $grey-color;
+        z-index: 2;
 
         .title {
             color: $dark-blue-color;
         }
     }
+}
 
-    .skill-body {
-        position: relative;
-        margin-top: 80px;
+.skill-description {
+    position: absolute;
+    height: 300px;
+    background-color: #F2C0AC;
+    width: 0px;
+    z-index: 10;
+    top: 30%;
+    transition: 1s;
+
+    &.open {
+        width: 40%;
+        transition: 1s;
+    }
+
+    .x-container {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+}
+
+.svg-path {
+    stroke: #F2C0AC;
+    fill: none;
+    stroke-width: 2px;
+    stroke-dasharray: 5;
+}
+
+.skills-container {
+    position: relative;
+
+    .skill-bubble {
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        background-color: $bright-blue-color;
+        color: white;
+        font-family: 'Oxygen', sans-serif;
+        font-size: 50px;
+        z-index: 5;
         display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        animation: changeOpacity 5s infinite;
 
-        .skill-container {
-            position: relative;
-            margin-left: 15%;
-            margin-right: 15%;
-            margin-bottom: 50px;
+        @keyframes changeOpacity{
+            0% {
+                opacity: 0.7;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.7;
+            }
         }
+
+        &:nth-child(1) {
+            left: 40%;
+            animation-delay: 1s;
+        }
+
+        &:nth-child(2) {
+            left: 75%;
+            top: 15%;
+            animation-delay: 2s;
+        }
+
+        &:nth-child(3) {
+            top: 68%;
+            left: 17%;
+            animation-delay: 3s;
+        }
+
+        &:nth-child(4) {
+            left: 58%;
+            top: 50%;
+            animation-delay: 4s;
+        }
+
     }
 }

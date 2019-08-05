@@ -1,0 +1,50 @@
+@import './shared.scss';
+
+.projectpage-container {
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: $off-white-color;
+    padding: 0 20%;
+
+    .backbutton-container {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+    }
+
+    .project-container {
+
+        .title {
+            color: $dark-blue-color;
+        }
+        
+        .body {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+
+            .description-box {
+                min-height: 200px;
+                width: 100%;
+                border: 2px solid black;
+                padding: 10px 10%;
+                font-family: 'Oxygen', sans-serif;
+
+                &.left {
+                    border-radius: 100px 10px 10px 100px;
+                }
+
+                &.right {
+                    border-radius: 10px 100px 100px 10px;
+                }
+            }
+        }
+    }
+}
+
+

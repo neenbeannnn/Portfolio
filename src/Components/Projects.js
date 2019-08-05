@@ -1,4 +1,5 @@
 import React, { Fragment, Component } from 'react';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Row, Col} from 'react-bootstrap';
 import 'boxicons';
@@ -26,6 +27,7 @@ class Projects extends Component {
             </div>
             <div className='project-body'>
               <div className='project-container'>  
+                <Link to='/Bird-Watcher'>
                 <div className='featured-project'>
                   <h3 className='project-title'>
                     BirdWatchers iOS app
@@ -42,6 +44,8 @@ class Projects extends Component {
                     <box-icon className='read-more' name='plus-circle' type='solid' size={'50px'} color={'#F7FFFE'}></box-icon>
                   </div>
                 </div>
+                </Link>
+
                 <Row>
                   <Col xs={12} sm={6} className='project-one'>
                     <h3 className='project-title'>
