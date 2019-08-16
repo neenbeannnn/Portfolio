@@ -1,9 +1,17 @@
 import React, { Fragment, Component } from 'react';
-import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Row, Col} from 'react-bootstrap';
+import ProjectModal from './ProjectModal';
 import 'boxicons';
 import '../App.scss';
+
+const project = {
+  BirdWatchers: 0,
+  LocoNote: 1,
+  CardGame: 2,
+  BeeWorld: 3,
+  wikiWhat: 4
+};
 
 class Projects extends Component {
     constructor(props, context) {
@@ -13,13 +21,20 @@ class Projects extends Component {
             readMoreSpin2: false,
             readMoreSpin3: false,
             readMoreSpin4: false,
-            readMoreSpin5: false
+            readMoreSpin5: false,
+            modalOpen: false,
+            selectedProject: ''
         }
     }
 
     render() {
         return (
           <Fragment>
+            <ProjectModal 
+              isOpen={this.state.modalOpen}
+              toggle={() => this.setState({modalOpen: !this.state.modalOpen})}
+              currentProject={this.state.selectedProject}
+            />
             <div className='stripe'>
               <h1 className='title m-0'>
                 Projects.
@@ -27,7 +42,7 @@ class Projects extends Component {
             </div>
             <div className='project-body'>
               <div className='project-container'>  
-                <Link to='/Bird-Watcher'>
+                
                 <div className='featured-project'>
                   <h3 className='project-title'>
                     BirdWatchers iOS app
@@ -40,11 +55,10 @@ class Projects extends Component {
                     the unique chaparral ecosystem. Thus this app was hatched from our interest of educating 
                     not only others, but also ourselves.
                   </h2>
-                  <div className={'read-more-container w-100' + (this.state.readMoreSpin1 ? ' spin' : ' ')} onClick={() => this.setState({readMoreSpin1: true})} onAnimationEnd={() => this.setState({readMoreSpin1: false})}>
+                  <div className={'read-more-container w-100' + (this.state.readMoreSpin1 ? ' spin' : ' ')} onClick={() => this.setState({readMoreSpin1: true, selectedProject: project.BirdWatchers, modalOpen: true})} onAnimationEnd={() => this.setState({readMoreSpin1: false})}>
                     <box-icon className='read-more' name='plus-circle' type='solid' size={'50px'} color={'#F7FFFE'}></box-icon>
                   </div>
                 </div>
-                </Link>
 
                 <Row>
                   <Col xs={12} sm={6} className='project-one'>
@@ -56,7 +70,7 @@ class Projects extends Component {
                       Pin an emoji and short message in your current location 
                       to be viewed by other users of the iOS app
                     </h2>
-                    <div className={'read-more-container w-100' + (this.state.readMoreSpin2 ? ' spin' : ' ')} onClick={() => this.setState({readMoreSpin2: true})} onAnimationEnd={() => this.setState({readMoreSpin2: false})}>
+                    <div className={'read-more-container w-100' + (this.state.readMoreSpin2 ? ' spin' : ' ')} onClick={() => this.setState({readMoreSpin2: true, selectedProject: project.LocoNote, modalOpen: true})} onAnimationEnd={() => this.setState({readMoreSpin2: false})}>
                       <box-icon className='read-more' name='plus-circle' type='solid' size={'50px'} color={'#F7FFFE'}></box-icon>
                     </div>
                   </Col>
@@ -68,7 +82,7 @@ class Projects extends Component {
                     <h2 className='project-info text-center'>
                       A simple 2-player card game that implements LinkedLists to remove matching cards
                     </h2>
-                    <div className={'read-more-container w-100' + (this.state.readMoreSpin3 ? ' spin' : ' ')} onClick={() => this.setState({readMoreSpin3: true})} onAnimationEnd={() => this.setState({readMoreSpin3: false})}>
+                    <div className={'read-more-container w-100' + (this.state.readMoreSpin3 ? ' spin' : ' ')} onClick={() => this.setState({readMoreSpin3: true, selectedProject: project.CardGame, modalOpen: true})} onAnimationEnd={() => this.setState({readMoreSpin3: false})}>
                       <box-icon className='read-more' name='plus-circle' type='solid' size={'50px'} color={'#F7FFFE'}></box-icon>
                     </div>
                   </Col>
@@ -83,7 +97,7 @@ class Projects extends Component {
                       Control a bee, collect honey from flowers, shoot honey at wasps, 
                       and collect upgrades!
                     </h2>
-                    <div className={'read-more-container w-100' + (this.state.readMoreSpin4 ? ' spin' : ' ')} onClick={() => this.setState({readMoreSpin4: true})} onAnimationEnd={() => this.setState({readMoreSpin4: false})}>
+                    <div className={'read-more-container w-100' + (this.state.readMoreSpin4 ? ' spin' : ' ')} onClick={() => this.setState({readMoreSpin4: true, selectedProject: project.BeeWorld, modalOpen: true})} onAnimationEnd={() => this.setState({readMoreSpin4: false})}>
                       <box-icon className='read-more' name='plus-circle' type='solid' size={'50px'} color={'#F7FFFE'}></box-icon>
                     </div>
                   </Col>
@@ -96,7 +110,7 @@ class Projects extends Component {
                       A short fun simple game about matching absurd wikiHow photos 
                       with equally weird tutorial names.
                     </h2>
-                    <div className={'read-more-container w-100' + (this.state.readMoreSpin5 ? ' spin' : ' ')} onClick={() => this.setState({readMoreSpin5: true})} onAnimationEnd={() => this.setState({readMoreSpin5: false})}>
+                    <div className={'read-more-container w-100' + (this.state.readMoreSpin5 ? ' spin' : ' ')} onClick={() => this.setState({readMoreSpin5: true, selectedProject: project.wikiWhat, modalOpen: true})} onAnimationEnd={() => this.setState({readMoreSpin5: false})}>
                       <box-icon className='read-more' name='plus-circle' type='solid' size={'50px'} color={'#F7FFFE'}></box-icon>
                     </div>
                   </Col>

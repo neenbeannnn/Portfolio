@@ -12,7 +12,7 @@ class Overlay extends Component {
                 <h2 className={'overlay-projects text-center my-3 w-100' + (this.props.menuClick ? ' open' : '')} onClick={this.props.handleMenuProjectClick}>projects.</h2> 
                 <h2 className={'overlay-skills text-center my-3 w-100' + (this.props.menuClick ? ' open' : '')} onClick={this.props.handleMenuSkillClick}>skills.</h2>
                 <h2 className={'overlay-work text-center my-3 w-100' + (this.props.menuClick ? ' open' : '')} onClick={this.props.handleMenuWorkClick}>work.</h2>
-                <h2 className={'overlay-contact text-center my-3 w-100' + (this.props.menuClick ? ' open' : '')} onClick={this.props.handleMenuConnectClick}>let's connect.</h2>     
+                <h2 className={'overlay-contact text-center my-3 w-100' + (this.props.menuClick ? ' open' : '')} onClick={this.props.handleMenuConnectClick}>say hi.</h2>     
             </div>
         );
     }

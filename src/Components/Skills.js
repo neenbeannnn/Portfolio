@@ -54,19 +54,6 @@ class Skills extends Component {
                 </div>
                 
                 <div className='skills-container'>
-                    
-                    <div className='skill-bubble' onClick={() => this.setState({descriptionOpen: true})}>REACT</div>
-                    <div className='skill-bubble' onClick={() => this.setState({descriptionOpen: true})}>C++</div>
-                    <div className='skill-bubble' onClick={() => this.setState({descriptionOpen: true})}>BASH</div>
-                    <div className='skill-bubble' onClick={() => this.setState({descriptionOpen: true})}>HTML/CSS</div>
-                    <div className={'skill-description' + (this.state.descriptionOpen ? ' open' : '')}>
-                        <div className='x-container' onClick={() => this.setState({descriptionOpen: false})}>
-                            <box-icon name='x' size={(this.state.descriptionOpen ? '50px' : '0px')}></box-icon>
-                        </div>
-                        <div className={'description-body p-3' + (this.state.descriptionOpen ? ' show' : '')}>
-                            {this.SkillContentSwitch}
-                        </div>
-                    </div>
                     <svg viewBox='0 0 500 500'>
                         <path 
                             d="M 90 0 Q 800 155 110 400 Q 5 440 85 500"

@@ -15,15 +15,14 @@ class Contact extends Component {
                     <div className='contact-box'>
                         <Row>
                         <Col xs={8} className='left-side'>
-                            <h3 className='email-text'>
-                            ninamckenzie88@
-                            <br/>gmail.com
-                            </h3>
+                            <h2 className='email-text'>
+                            ninamckenzie88@gmail.com
+                            </h2>
                             <hr/>
                             <h2 className='description'>
                                 Hi! I'm Nina, a full-time student at UCSB and front-end developer based in Irvine. I love working with 
                                 kids and am constantly learning something new (currently React). Feel free to reach
-                                out and send me a quick email. Say hi!
+                                out and send me a quick email.
                             </h2>
                             <div>
                             <a className='mr-2' href='https://github.com/neenbeannnn' rel='noopener noreferrer' target='_blank'>

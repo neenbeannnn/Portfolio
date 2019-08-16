@@ -1,0 +1,26 @@
+@import './shared.scss';
+
+.modal-header {
+    background-color: $dark-blue-color;
+    color: white;
+    flex-direction: column!important;
+    align-content: center!important;
+
+    .modal-title {
+        font-family: 'Playfair Display', serif;
+        width: 100%;
+    }
+}
+
+.title-text {
+    background-color: $accent-color;
+    color: white;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+.text {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+}

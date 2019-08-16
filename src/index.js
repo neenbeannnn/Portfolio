@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import ProjectPage from './Components/ProjectPage';
 
 
 const routing = (
@@ -13,10 +12,6 @@ const routing = (
             <Route
                 path='/' exact
                 render={() => <App />}
-            />
-            <Route 
-                path='/Bird-Watcher' exact
-                render={() => <ProjectPage/>}
             />
         </Switch>
     </Router>
