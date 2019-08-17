@@ -79,8 +79,10 @@ class ProjectModal extends Component {
                         <div className='title-text'>challenges.</div>
                         <p className='text'>{currentProjectTitle.challenges}</p>
                     </Fragment>}
-                    <div className='title-text'>what i learned.</div>
-                    <ul className='text'>{ currentProjectTitle.what_i_learned && currentProjectTitle.what_i_learned.map((element, i) => <li key={i}>{element}</li>)}</ul>
+                    {currentProjectTitle.what_i_learned && <Fragment>
+                        <div className='title-text'>what i learned.</div>
+                        <ul className='text'>{currentProjectTitle.what_i_learned.map((element, i) => <li key={i}>{element}</li>)}</ul>
+                    </Fragment>}
                 </ModalBody>
             </Modal>
         );

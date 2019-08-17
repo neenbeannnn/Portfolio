@@ -70,11 +70,11 @@
                 border: 2px solid $off-white-color;
                 width: 20%;
                 margin: 50px 0;
-                transition: width 1s;
+                transition: width 0.3s;
 
-                &.expand {
+                &.hover {
                     width: 40%;
-                    transition: width 1s;
+                    transition: width 0.3s;
                 }
             }
 

@@ -3,44 +3,23 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'boxicons';
 import '../App.scss';
 
-const SkillSelected = {
-    React: 0,
-    CPlusPlus: 1,
-    Bash: 2,
-    HtmlCss: 3
-};
-
 class Skills extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
-            descriptionOpen: false,
-            skillSelected: SkillSelected.React
-        }
-    }
-
-    SkillContentSwitch = () => {
-        switch(this.state.skillSelected) {
-            case SkillSelected.React:
-                return (
-                    <h1>React</h1>
-                );
-            case SkillSelected.CPlusPlus:
-                return (
-                    <h1>C++</h1>
-                );
-            case SkillSelected.Bash:
-                return (
-                    <h1>Bash</h1>
-                );
-            case SkillSelected.HtmlCss:
-                return (
-                    <h1>Html/Css</h1>
-                );
-            default:
-                return (
-                    <h1>No skill selected</h1>
-                );
+            cardOneHover: false,
+            cardTwoHover: false,
+            cardThreeHover: false,
+            cardFourHover: false,
+            cardFiveHover: false,
+            cardSixHover: false,
+            cardSevenHover: false,
+            cardEightHover: false,
+            cardNineHover: false,
+            cardTenHover: false,
+            cardElevenHover: false,
+            cardTwelveHover: false,
+            cardThirteenHover: false
         }
     }
 
@@ -52,14 +31,20 @@ class Skills extends Component {
                         Skills.
                     </h1>
                 </div>
-                
                 <div className='skills-container'>
-                    <svg viewBox='0 0 500 500'>
-                        <path 
-                            d="M 90 0 Q 800 155 110 400 Q 5 440 85 500"
-                            className='svg-path'
-                        />
-                    </svg>
+                    <span className={'skill-card m-1' + (this.state.cardOneHover ? ' hover-blue' : '')} onMouseEnter={() => this.setState({cardOneHover: true})} onMouseLeave={() => this.setState({cardOneHover: false})}>React.js</span>
+                    <span className={'skill-card m-1' + (this.state.cardNineHover ? ' hover-blue' : '')} onMouseEnter={() => this.setState({cardNineHover: true})} onMouseLeave={() => this.setState({cardNineHover: false})}>C++</span>
+                    <span className={'skill-card m-1' + (this.state.cardThreeHover ? ' hover-blue' : '')} onMouseEnter={() => this.setState({cardThreeHover: true})} onMouseLeave={() => this.setState({cardThreeHover: false})}>Bootstrap</span>
+                    <span className={'skill-card m-1' + (this.state.cardTwoHover ? ' hover-blue' : '')} onMouseEnter={() => this.setState({cardTwoHover: true})} onMouseLeave={() => this.setState({cardTwoHover: false})}>HTML</span>
+                    <span className={'skill-card m-1' + (this.state.cardFourHover ? ' hover-blue' : '')} onMouseEnter={() => this.setState({cardFourHover: true})} onMouseLeave={() => this.setState({cardFourHover: false})}>CSS</span>
+                    <span className={'skill-card m-1' + (this.state.cardFiveHover ? ' hover-orange' : '')} onMouseEnter={() => this.setState({cardFiveHover: true})} onMouseLeave={() => this.setState({cardFiveHover: false})}>Formix</span>
+                    <span className={'skill-card m-1' + (this.state.cardSixHover ? ' hover-orange' : '')} onMouseEnter={() => this.setState({cardSixHover: true})} onMouseLeave={() => this.setState({cardSixHover: false})}>Yup Validation</span>
+                    <span className={'skill-card m-1' + (this.state.cardEightHover ? ' hover-blue' : '')} onMouseEnter={() => this.setState({cardEightHover: true})} onMouseLeave={() => this.setState({cardEightHover: false})}>Java</span>
+                    <span className={'skill-card m-1' + (this.state.cardElevenHover ? ' hover-orange' : '')} onMouseEnter={() => this.setState({cardElevenHover: true})} onMouseLeave={() => this.setState({cardElevenHover: false})}>React Helmet</span>
+                    <span className={'skill-card m-1' + (this.state.cardTenHover ? ' hover-blue' : '')} onMouseEnter={() => this.setState({cardTenHover: true})} onMouseLeave={() => this.setState({cardTenHover: false})}>Bash</span>
+                    <span className={'skill-card m-1' + (this.state.cardTwelveHover ? ' hover-blue' : '')} onMouseEnter={() => this.setState({cardTwelveHover: true})} onMouseLeave={() => this.setState({cardTwelveHover: false})}>Arduino</span>
+                    <span className={'skill-card m-1' + (this.state.cardSevenHover ? ' hover-orange' : '')} onMouseEnter={() => this.setState({cardSevenHover: true})} onMouseLeave={() => this.setState({cardSevenHover: false})}>Styled Icons</span>
+                    <span className={'skill-card m-1' + (this.state.cardThirteenHover ? ' hover-pink' : '')} onMouseEnter={() => this.setState({cardThirteenHover: true})} onMouseLeave={() => this.setState({cardThirteenHover: false})}>Visual Studio Code</span>
                 </div>
                 <div className='arrow-container w-100' onClick={this.props.scrollToNext}>
                     <box-icon name='chevrons-down' animation='chevrons-down-fade-down' color={'#1E3B44'} size={'50px'}></box-icon>
