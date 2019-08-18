@@ -70,11 +70,12 @@
                 border: 2px solid $off-white-color;
                 width: 20%;
                 margin: 50px 0;
-                transition: width 0.3s;
+                transition: 0.3s;
 
                 &.hover {
                     width: 40%;
-                    transition: width 0.3s;
+                    border: 2px dashed $off-white-color;
+                    transition: 0.3s;
                 }
             }
 

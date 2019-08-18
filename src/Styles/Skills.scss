@@ -16,8 +16,8 @@
 
 .skills-container {
     position: relative;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 8%;
+    padding-right: 8%;
     margin: 250px;
     display: flex;
     flex-wrap: wrap;
@@ -36,18 +36,21 @@
         &.hover-blue {
             transition: 0.3s;
             color: white;
+            border-color: $bright-blue-color;
             background-color: $bright-blue-color;
         }
 
         &.hover-orange {
             transition: 0.3s;
             color: white;
+            border-color: $accent-color;
             background-color: $accent-color;
         }
 
         &.hover-pink {
             transition: 0.3s;
             color: white;
+            border-color: #F2C0AC;
             background-color: #F2C0AC;
         }
     }

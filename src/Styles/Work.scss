@@ -17,21 +17,16 @@
         justify-content: center;
         align-items: center;
 
-        @media (max-width: 575px) {
-            margin-top: 65px;
-        }
-
         .work-container {
-            position: relative;
-            margin-left: 15%;
-            margin-right: 15%;
+            width: 100%;
+            padding-left: 15%;
+            padding-right: 15%;
             margin-bottom: 50px;
 
             .featured-work {
+                position: relative;
                 background-color: $accent-color;
                 width: 100%;
-                height: 500px;
-                position: relative;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -39,16 +34,96 @@
                 padding: 0 15%;
             }
 
+            .work-one,
+            .work-two {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0 50px;
+            }
+
             .work-one {
                 background-color: $grey-color;
-                height: 500px;
-                width: 100%;
             }
 
             .work-two {
                 background-color: $dark-blue-color;
-                height: 500px;
-                width: 100%;
+            }
+
+            .date-stamp {
+                color: $off-white-color;
+                background-color: $dark-blue-color;
+                font-family: 'Oxygen', sans-serif;
+                font-size: 20px; 
+                align-self: flex-end;
+
+                &.contrast {
+                    color: $dark-blue-color;
+                    background-color: $off-white-color;
+                }
+            }
+
+            .work-title {
+                position: relative;
+                font-size: 50px;
+                color: $off-white-color;
+                padding-top: 50px;
+            }
+
+            .work-subtitle {
+               font-size: 20px;
+               color: $off-white-color;
+               opacity: 0.8; 
+            }
+
+            hr {
+                position: relative;
+                border: 2px solid $off-white-color;
+                width: 20%;
+                margin: 50px 0;
+                transition: 0.3s;
+
+                &.hover {
+                    width: 40%;
+                    border: 2px dashed $off-white-color;
+                    transition: 0.3s;
+                }
+            }
+
+            .subsection {
+                padding: 5px;
+                font-size: 25px;
+                font-family: 'Oxygen', sans-serif;
+                color: $off-white-color;
+
+                &.pink {
+                    background-color: #F2C0AC;
+                }
+            }
+
+            .list {
+                font-size: 20px;
+                font-family: 'Oxygen', sans-serif;
+                color: $off-white-color;
+            }
+
+            .work-info {
+                position: relative;
+                font-size: 20px;
+                font-family: 'Oxygen', sans-serif;
+                color: $off-white-color;
+                flex-grow: 1;
+
+                .emphasize-text {
+                    color: $dark-blue-color;
+                    font-size: 23px;
+                    font-weight: bolder;
+
+                    &.contrast {
+                        color: $bright-blue-color;
+                    }
+                }
             }
         }
     }
