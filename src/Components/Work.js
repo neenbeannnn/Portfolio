@@ -99,7 +99,7 @@ class Work extends Component {
                             <div className='work-info mb-5'>
                                 I tutored an elementary-level <span className='emphasize-text contrast'>international</span> student <span className='emphasize-text contrast'>twice</span> a week.
                                 The student improved his <span className='emphasize-text contrast'>English reading</span> skills from barely being able to read to reading chapter novels.
-                                I acheived this by preparing him for <span className='emphasize-text contrast'>weekly presentations</span> and <span className='emphasize-text contrast'>teaching</span> him basic techniques to sound out words.
+                                I helped him by preparing him for <span className='emphasize-text contrast'>weekly presentations</span> and <span className='emphasize-text contrast'>teaching</span> him basic techniques to sound out words.
                             </div>
                         </Col>
                     </Row>

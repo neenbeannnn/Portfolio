@@ -61,7 +61,7 @@ class ProjectModal extends Component {
                 currentProjectTitle = 'No project found!';
         }
         return(
-            <Modal isOpen={this.props.isOpen} toggle={this.props.toggle}>
+            <Modal className='modal-lg' isOpen={this.props.isOpen} toggle={this.props.toggle}>
                 <ModalHeader>
                     <div className='clickable text-right'>
                         <box-icon name='x' size='32px' color='#F7FFFE' onClick={this.props.toggle}/>

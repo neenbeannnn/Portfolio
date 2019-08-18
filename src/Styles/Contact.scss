@@ -30,6 +30,18 @@
                 padding: 50px 50px;
                 color: $off-white-color;
 
+                a {
+                    color: $accent-color;
+
+                    &.email {
+                        color: $off-white-color;
+                    }
+
+                    &:hover {
+                        color: $grey-color;
+                    }
+                }
+
                 .email-text {
                     font-size: 35px;
                     padding-top: 30px;

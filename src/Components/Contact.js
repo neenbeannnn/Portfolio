@@ -16,13 +16,12 @@ class Contact extends Component {
                         <Row>
                         <Col xs={8} className='left-side'>
                             <h2 className='email-text'>
-                            ninamckenzie88@gmail.com
+                                <a className='email' href='mailto:ninamckenzie88@gmail.com'>ninamckenzie88@gmail.com</a>
                             </h2>
                             <hr/>
                             <h2 className='description'>
                                 Hi! I'm Nina, a full-time student at UCSB and front-end developer based in Irvine. I love working with 
-                                kids and am constantly learning something new (currently React). Feel free to reach
-                                out and send me a quick email.
+                                kids and am constantly learning something new. Check out my resume <a href='https://docs.google.com/document/d/1l_EPu_n6Dn9Gy8krtNbGzZqixgW3-Z8JBYnsITRfJ94/edit?usp=sharing' rel='noopener noreferrer' target='_blank'>here</a> and feel free to reach out to say hi!
                             </h2>
                             <div>
                             <a className='mr-2' href='https://github.com/neenbeannnn' rel='noopener noreferrer' target='_blank'>
