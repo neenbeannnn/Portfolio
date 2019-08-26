@@ -1,8 +1,8 @@
 {
-    "homepage": "http://neenbeannnn.github.io/Portfolio",
     "name": "portfolio",
     "version": "0.1.0",
     "private": true,
+    "homepage": "https://neenbeannnn.github.io/Portfolio",
     "dependencies": {
         "bootstrap": "^4.3.1",
         "boxicons": "^2.0.2",
