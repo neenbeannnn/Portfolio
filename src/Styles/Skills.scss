@@ -16,9 +16,8 @@
 
 .skills-container {
     position: relative;
-    padding-left: 8%;
-    padding-right: 8%;
-    margin: 250px;
+    margin: 10% 15%;
+    margin-bottom: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -51,30 +50,25 @@
         &.hover-pink {
             transition: 0.3s;
             color: white;
-            border-color: #F2C0AC;
-            background-color: #F2C0AC;
+            border-color: #f2c0ac;
+            background-color: #f2c0ac;
         }
     }
 }
 
-.skills-arrow {
-    z-index: 10;
-}
-
 .svg-front {
-    position: absolute;
-    top: 61%;
     z-index: 5;
+    position: absolute;
+    bottom: -1%;
+    left: 0;
 }
 
 .svg-middle {
-    position: absolute;
-    top: 58%;
     z-index: 4;
-}
-
-.svg-back {
     position: absolute;
-    top: 61%;
+    bottom: 0;
+    left: 0;
+}
+.svg-back {
     z-index: 3;
 }
