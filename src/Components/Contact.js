@@ -14,14 +14,14 @@ class Contact extends Component {
                     </div>
                     <div className='contact-box'>
                         <Row>
-                            <Col xs={8} className='left-side'>
+                            <Col xs={12} xl={8} className='left-side'>
                                 <h2 className='email-text'>
                                     <a className='email' href='mailto:ninamckenzie88@gmail.com'>ninamckenzie88@gmail.com</a>
                                 </h2>
                                 <hr />
                                 <h2 className='description'>
-                                    Hi! I'm Nina, a full-time student at UCSB and front-end developer based in Irvine. I love working with
-                                kids and am constantly learning something new. Check out my resume <a href='https://docs.google.com/document/d/1npzpRFrqcwMQ_I5rLDcImGNeuMjhLftKivvFVpSVX2c/edit?usp=sharingi' rel='noopener noreferrer' target='_blank'>here</a> and feel free to reach out to say hi!
+                                    Hi! I'm Nina, a full-time student at UC Santa Barbara. I love working with
+                                kids and am constantly learning something new. Currently, I am learning basic circuitry using the Arduino. Check out my resume <a href='https://docs.google.com/document/d/1npzpRFrqcwMQ_I5rLDcImGNeuMjhLftKivvFVpSVX2c/edit?usp=sharingi' rel='noopener noreferrer' target='_blank'>here</a> and feel free to reach out to say hi!
                             </h2>
                                 <div>
                                     <a className='mr-2' href='https://github.com/neenbeannnn' rel='noopener noreferrer' target='_blank'>

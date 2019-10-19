@@ -26,7 +26,7 @@ class Work extends Component {
                     <div className='work-container'>
                         <div className='featured-work' onMouseEnter={() => this.setState({ workOneHover: true })} onMouseLeave={() => this.setState({ workOneHover: false })}>
                             <div className='date-stamp p-2'>
-                                Summer 2019
+                                Summer 2019 - Current
                         </div>
                             <h3 className='work-title'>
                                 Frontend Web Dev Intern
